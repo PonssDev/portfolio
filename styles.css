@@ -322,6 +322,16 @@ nav button:hover::after {
   color: var(--accent-color);
 }
 
+.info-items a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.info-items a:hover {
+  color: var(--accent-color);
+}
+
 /* Section styles */
 section {
   margin-bottom: 60px;
