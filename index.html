@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Minimalista</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="dark-mode">
+    <header>
+        <div class="logo">pons</div>
+        <nav>
+            <ul>
+                <li><button id="theme-toggle" aria-label="Cambiar modo oscuro/claro">
+                        <i class="fas fa-moon"></i>
+                    </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile">
+            <div class="profile-image">
+                <img src="img/fofo linkedin.webp" alt="Foto de perfil">
+            </div>
+            <h1>Alan Delgado Pons</h1>
+            <div class="badge">
+                <span>Desarrollador Frontend</span>
+            </div>
+            <div class="info-items">
+                <div class="info-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Trabajando</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mallorca, España</span>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-github"></i>
+                    <span>Github</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy desarrollador frontend con 1 año de experiencia profesional trabajando con Angular, especializado en
+                construir interfaces modernas, funcionales y escalables. Me enfoco en escribir código limpio, modular y
+                mantenible, siguiendo buenas prácticas y patrones de diseño.
+
+                Durante este tiempo he trabajado en el desarrollo de aplicaciones web dinámicas, tanto de cara al
+                usuario como herramientas internas, integrando APIs REST, manejando estados complejos con RxJS, y
+                aplicando principios de diseño responsivo y accesible.
+            </p>
+        </section>
+
+        <section class="experience">
+            <h2>Experiencia</h2>
+            <div class="experience-card">
+                <h3>Desarrollador Frontend</h3>
+                <h4>World2Meet</h4>
+                <p class="date">Marzo 2024 - Actualidad</p>
+                <ul>
+                    <li>Desarrollar, mantener y optimizar componentes reutilizables, librerías y aplicaciones web o
+                        backoffice en SPA y SSR (Angular/Nestjs).</li>
+                    <li>Ejecución de pipelines CI/Jenkins.</li>
+                    <li>Maquetación HTML</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="technologies">
+            <h2>Tecnologías</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <span>Angular</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class='bx bxl-typescript'></i>
+                    </div>
+                    <span>TypeScript</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <span>HTML</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <span>CSS</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fab fa-jenkins"></i>
+                    </div>
+                    <span>Jenkins</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <span>Playwright</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <span>Microsoft Azure</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Proyectos</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/tiny-invoice.png" alt="StrongPassword App">
+                    </div>
+                    <h3>TinyInvoice</h3>
+                    <p>Generador de facturas para Freelancers</p>
+                    <div class="project-links">
+                        <a href="https://tiny-invoice.vercel.app/" aria-label="Ver proyecto"><i class="fas fa-link"></i></a>
+                        <a href="#" aria-label="Ver código en GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education">
+            <h2>Formación</h2>
+            <div class="education-card">
+                <h3>Formación superior en Desarrollo de Aplicaciones Web (DAW)</h3>
+                <h4>EDIB</h4>
+                <p class="date">Octubre 2022 - Junio 2024</p>
+                <p>Java, MySQL, HTML, CSS, Javascript y PHP</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
