@@ -678,6 +678,96 @@ section.visible .project-card:nth-child(2) {
   transform: scale(1.1);
 }
 
+.project-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--secondary-accent);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+.project-tech {
+  display: flex;
+  gap: 8px;
+  padding: 0 15px 10px;
+  flex-wrap: wrap;
+}
+
+.project-tech span {
+  background: var(--accent-color-light);
+  color: var(--accent-color);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.project-progress {
+  padding: 0 15px 15px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.project-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--secondary-accent);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+.project-tech {
+  display: flex;
+  gap: 8px;
+  padding: 0 15px 10px;
+  flex-wrap: wrap;
+}
+
+.project-tech span {
+  background: var(--accent-color-light);
+  color: var(--accent-color);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.project-progress {
+  padding: 0 15px 15px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.light-mode .progress-bar {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 .project-card h3 {
   padding: 15px 15px 5px;
   font-size: 1.1rem;
@@ -717,6 +807,16 @@ section.visible .project-card:nth-child(2) {
 .project-links a:hover {
   transform: translateY(-3px);
   color: var(--accent-color);
+}
+
+.project-links a.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-links a.disabled:hover {
+  transform: none;
+  color: inherit;
 }
 
 /* Animations */
