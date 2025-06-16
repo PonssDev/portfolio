@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Delgado Pons | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Alan Delgado Pons | Portfolio</title>    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-additional.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,10 +15,30 @@
 </head>
 
 <body class="dark-mode">
+    <div id="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+            </svg>
+        </div>
+    </div>
+    
+    <button id="scroll-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
     <header>
         <div class="logo">pons</div>
+        <button id="mobile-menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav>
             <ul>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#experience">Experiencia</a></li>                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#technologies">Tecnologías</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#education">Formación</a></li>
                 <li><button id="theme-toggle" aria-label="Cambiar modo oscuro/claro">
                         <i class="fas fa-moon"></i>
                     </button></li>
@@ -27,7 +47,7 @@
     </header>
 
     <main>
-        <section class="profile">
+        <section id="profile" class="profile">
             <div class="profile-image">
                 <img src="img/foto linkedin (5).png" alt="Foto de perfil de Alan Delgado Pons">
             </div>
@@ -56,7 +76,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section id="about" class="about">
             <h2>Sobre mí</h2>
             <p>
                 Soy desarrollador frontend con más de 1 año de experiencia profesional trabajando con Angular, especializado en
@@ -67,7 +87,8 @@
                 usuario como herramientas internas, integrando APIs REST, manejando estados complejos con RxJS, y
                 aplicando principios de diseño responsivo y accesible.
             </p>
-        </section>        <section class="experience">
+        </section>
+        <section id="experience" class="experience">
             <h2>Experiencia</h2>
             <div class="experience-grid">
                 <div class="experience-card">
@@ -141,7 +162,64 @@
             </div>
         </section>
 
-        <section class="technologies">
+        <section id="projects" class="projects">
+            <h2>Proyectos</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/tiny-invoice.png" alt="TinyInvoice - Generador de facturas">
+                        <div class="project-badge" style="background: var(--accent-color);">Completado</div>
+                    </div>
+                    <h3>TinyInvoice</h3>
+                    <p>Generador de facturas para Freelancers. Aplicación web que permite crear, gestionar y exportar facturas
+                        de forma rápida y sencilla sin necesidad de registro.</p>
+                    <div class="project-tech">
+                        <span>Angular</span>
+                        <span>TypeScript</span>
+                        <span>CSS</span>
+                        <span>Reactive Forms</span>
+                    </div>
+                    <div class="project-progress">
+                        <span style="display: block; font-size: 0.75rem; margin-top: 5px; opacity: 0.7;">Lanzado: Mayo
+                            2025</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://tiny-invoice.vercel.app/" target="_blank" aria-label="Ver proyecto"><i
+                                class="fas fa-link"></i></a>
+                        <a href="https://github.com/PonssDev/tiny-invoice" target="_blank" aria-label="Ver código en GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/country-app.PNG" alt="CountriesApp ">
+                        <div class="project-badge" style="background: var(--accent-color);">Completado</div>
+                    </div>
+                    <h3>CountriesApp</h3>
+                    <p>App simple para ver y buscar países por capital, región o país y poder ver sus características.
+                        Implementada con
+                        Angular y consumiendo la API REST Countries.</p>
+                    <div class="project-tech">
+                        <span>Angular</span>
+                        <span>TypeScript</span>
+                        <span>REST API</span>
+                        <span>TailwindCSS</span>
+                        <span>DaisyUI</span>
+                    </div>
+                    <div class="project-progress">
+                        <span style="display: block; font-size: 0.75rem; margin-top: 5px; opacity: 0.7;">Lanzado: Mayo
+                            2025</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="disabled" aria-label="Ver proyecto"><i class="fas fa-link"></i></a>
+                        <a href="https://github.com/PonssDev/country-app" target="_blank" aria-label="Ver código en GitHub"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technologies" class="technologies">
             <h2>Tecnologías</h2>
             <div class="tech-grid">
                 <div class="tech-item">
@@ -194,81 +272,80 @@
             </div>
         </section>
 
-        <section class="projects">
-            <h2>Proyectos</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="img/tiny-invoice.png" alt="TinyInvoice - Generador de facturas">
-                        <div class="project-badge" style="background: var(--accent-color);">Completado</div>
-                    </div>
-                    <h3>TinyInvoice</h3>
-                    <p>Generador de facturas para Freelancers. Aplicación web que permite crear, gestionar y exportar facturas de forma rápida y sencilla sin necesidad de registro.</p>
-                    <div class="project-tech">
-                        <span>Angular</span>
-                        <span>TypeScript</span>
-                        <span>CSS</span>
-                        <span>Reactive Forms</span>
-                    </div>
-                    <div class="project-progress">
-                        <span style="display: block; font-size: 0.75rem; margin-top: 5px; opacity: 0.7;">Lanzado: Mayo 2025</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://tiny-invoice.vercel.app/" target="_blank" aria-label="Ver proyecto"><i
-                                class="fas fa-link"></i></a>
-                        <a href="https://github.com/PonssDev/tiny-invoice" target="_blank" aria-label="Ver código en GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="img/country-app.PNG" alt="CountriesApp ">
-                        <div class="project-badge" style="background: var(--accent-color);">Completado</div>
-                    </div>
-                    <h3>CountriesApp</h3>
-                    <p>App simple para ver y buscar países por capital, región o país y poder ver sus características. Implementada con
-                        Angular y consumiendo la API REST Countries.</p>
-                    <div class="project-tech">
-                        <span>Angular</span>
-                        <span>TypeScript</span>
-                        <span>REST API</span>
-                        <span>TailwindCSS</span>
-                        <span>DaisyUI</span>
-                    </div>
-                    <div class="project-progress">
-                        <span style="display: block; font-size: 0.75rem; margin-top: 5px; opacity: 0.7;">Lanzado: Mayo 2025</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="disabled" aria-label="Ver proyecto"><i class="fas fa-link"></i></a>
-                        <a href="https://github.com/PonssDev/country-app" target="_blank" aria-label="Ver código en GitHub"><i
-                                class="fab fa-github"></i></a>
+        
+        
+
+        <section id="skills" class="skills">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Angular</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress" style="width: 70%; background: var(--accent-color);"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>TypeScript</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress" style="width: 70%; background: var(--accent-color);"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress" style="width: 80%; background: var(--accent-color);"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="project-card">
-                    <div class="project-image">
-                        <img src="img/spoiler-ninja.PNG" alt="Spoiler Ninja">
-                        <div class="project-badge" style="background: var(--secondary-accent);">Desarrollo</div>
+                <div class="skill-category">
+                    <h3>DevOps</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Jenkins</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress" style="width: 45%; background: var(--secondary-accent);"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>GitLab CI/CD</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress" style="width: 70%; background: var(--secondary-accent);"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>ArgoCD</span>
+                                <span>35%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress" style="width: 35%; background: var(--secondary-accent);"></div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Spoiler Ninja</h3>
-                    <p>Spoiler Ninja bloquea automáticamente las portadas de episodios plataformas de
-                    streaming.
-                    De momento solo funciona en Netflix pero próximamente se añadirán mas plataformas.
-                    <strong>Extensión no publicada, se puede clonar y usar en local de momento</strong></p>
-                    <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                    <div class="project-progress">
-                        <span style="display: block; font-size: 0.75rem; margin-top: 5px; opacity: 0.7;">Lanzamiento previsto: Junio 2025</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://spoiler-ninja.vercel.app/" aria-label="Ver proyecto"><i class="fas fa-link"></i></a>
-                        <a href="#" class="disabled" target="_blank" aria-label="Ver código en GitHub"><i
-                                class="fab fa-github"></i></a>
-                    </div>
-                </div> -->
+                </div>
             </div>
-        </section>        <section class="education">
+        </section>
+
+        <section id="education" class="education">
             <h2>Formación</h2>
             <div class="education-grid">
                 <div class="education-card">
@@ -286,7 +363,8 @@
                         </div>
                     </div>
                     <div class="education-content">
-                        <p>Ciclo Formativo de Grado Superior enfocado en el desarrollo de aplicaciones web modernas, cubriendo tanto frontend como backend.</p>
+                        <p>Ciclo Formativo de Grado Superior enfocado en el desarrollo de aplicaciones web modernas, cubriendo
+                            tanto frontend como backend.</p>
                         <div class="skills-tags">
                             <span>Java</span>
                             <span>MySQL</span>
@@ -295,11 +373,27 @@
                             <span>JavaScript</span>
                             <span>PHP</span>
                         </div>
-                    </div>
-                </div>
+                    </div>                </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">pons</div>
+            <div class="footer-text">
+                &copy; 2025 Alan Delgado Pons. Todos los derechos reservados.
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/alan-delgado-pons/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/PonssDev" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

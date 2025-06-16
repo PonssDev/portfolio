@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Preloader
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    window.addEventListener("load", () => {
+      preloader.style.opacity = "0";
+      preloader.style.visibility = "hidden";
+
+      // Inicializar animaciones de skills después de que cargue la página
+      initSkillsAnimation();
+    });
+  }
+
   const themeToggle = document.getElementById("theme-toggle");
   const body = document.body;
   const themeIcon = themeToggle.querySelector("i");
@@ -170,4 +182,77 @@ document.addEventListener("DOMContentLoaded", () => {
       link.style.color = "";
     });
   });
+
+  // Mobile menu toggle
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const nav = document.querySelector("nav");
+
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+
+      // Change icon
+      const icon = mobileMenuToggle.querySelector("i");
+      if (nav.classList.contains("active")) {
+        icon.className = "fas fa-times";
+      } else {
+        icon.className = "fas fa-bars";
+      }
+    });
+  }
+
+  // Close mobile menu when clicking on a link
+  document.querySelectorAll("nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        if (mobileMenuToggle) {
+          mobileMenuToggle.querySelector("i").className = "fas fa-bars";
+        }
+      }
+    });
+  });
+  // Scroll to top button
+  const scrollTopBtn = document.getElementById("scroll-top");
+
+  if (scrollTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add("visible");
+      } else {
+        scrollTopBtn.classList.remove("visible");
+      }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+
+  // Inicializar animaciones de skills
+  function initSkillsAnimation() {
+    const progressBars = document.querySelectorAll(".progress");
+
+    progressBars.forEach((bar) => {
+      const width = bar.style.width;
+      bar.style.width = "0";
+      bar.style.setProperty("--width", width);
+    });
+  }
+});
+
+// Eliminar el efecto preloader cuando todas las imágenes y recursos estén cargados
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500);
+    }, 800);
+  }
 });
