@@ -196,16 +196,16 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("mouseleave", () => {
       link.style.color = "";
     });
-  });
-  // Mobile menu toggle
+  }); // Mobile menu toggle
   const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
   const nav = document.getElementById("mobile-nav");
   const mobileNavOverlay = document.querySelector(".mobile-nav-overlay");
-  if (mobileMenuToggle) {
+  if (mobileMenuToggle && nav) {
     console.log("Mobile menu toggle found:", mobileMenuToggle);
     console.log("Nav element found:", nav);
 
-    mobileMenuToggle.addEventListener("click", () => {
+    mobileMenuToggle.addEventListener("click", function (e) {
+      e.stopPropagation(); // Prevenir propagación del evento
       console.log("Mobile menu toggle clicked!");
       const isExpanded = nav.classList.contains("active");
       nav.classList.toggle("active");
@@ -217,7 +217,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Actualizar atributos ARIA
-      mobileMenuToggle.setAttribute("aria-expanded", !isExpanded);
+      mobileMenuToggle.setAttribute(
+        "aria-expanded",
+        nav.classList.contains("active") ? "true" : "false"
+      );
 
       // Change icon
       const icon = mobileMenuToggle.querySelector("i");
@@ -236,10 +239,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cerrar el menú al hacer clic fuera de él
     document.addEventListener("click", (e) => {
+      // Solo cerramos si el menú está activo y se hizo clic fuera de él
       if (
+        nav &&
+        nav.classList.contains("active") &&
         !nav.contains(e.target) &&
         e.target !== mobileMenuToggle &&
-        nav.classList.contains("active")
+        !mobileMenuToggle.contains(e.target)
       ) {
         nav.classList.remove("active");
         if (mobileNavOverlay) {
@@ -251,11 +257,10 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileMenuToggle.setAttribute("aria-label", "Abrir menú");
       }
     });
-  }
-  // Close mobile menu when clicking on a link
+  } // Close mobile menu when clicking on a link
   document.querySelectorAll("#mobile-nav a").forEach((link) => {
     link.addEventListener("click", () => {
-      if (nav.classList.contains("active")) {
+      if (nav && nav.classList.contains("active")) {
         nav.classList.remove("active");
         if (mobileNavOverlay) {
           mobileNavOverlay.classList.remove("active");
