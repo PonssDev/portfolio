@@ -283,23 +283,9 @@ nav ul {
   overflow: hidden;
 }
 
-.badge::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0;
-  transform: scale(0);
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  pointer-events: none;
-}
-
 .badge:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(76, 175, 80, 0.2);
+  box-shadow: 0 10px 20px rgba(47, 57, 143, 0.2);
   letter-spacing: 0.5px;
 }
 
@@ -425,24 +411,6 @@ section.visible h2::after {
   box-shadow: var(--card-shadow-light);
 }
 
-.about::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: var(--gradient-subtle);
-  opacity: 0.4;
-  z-index: -1;
-  transform: translateY(100%);
-  transition: transform 0.6s ease;
-}
-
-.about:hover::before {
-  transform: translateY(0);
-}
-
 .about p {
   font-size: 1.05rem;
   line-height: 1.8;
@@ -516,17 +484,201 @@ section.visible .tech-item {
 }
 
 /* Experience and Education cards */
+.experience-grid,
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
 .experience-card,
 .education-card {
   background-color: var(--card-bg-dark);
   border-radius: var(--border-radius);
-  padding: 25px;
-  margin-bottom: 20px;
+  overflow: hidden;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   opacity: 0;
   transform: translateY(20px);
-  border-left: 4px solid var(--accent-color);
   box-shadow: var(--card-shadow-dark);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.light-mode .experience-card,
+.light-mode .education-card {
+  background-color: var(--card-bg-light);
+  box-shadow: var(--card-shadow-light);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+section.visible .experience-card,
+section.visible .education-card {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.experience-card:hover,
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-color);
+}
+
+.experience-header {
+  display: flex;
+  padding: 20px;
+  background: rgba(79, 70, 229, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.light-mode .experience-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.experience-company-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.experience-title {
+  flex: 1;
+}
+
+.experience-title h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--text-color-dark);
+  font-weight: 600;
+}
+
+.light-mode .experience-title h3 {
+  color: var(--text-color-light);
+}
+
+.experience-title h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.experience-date {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.experience-date i {
+  margin-right: 6px;
+  color: var(--accent-color);
+}
+
+.experience-duration {
+  display: flex;
+  align-items: flex-start;
+}
+
+.badge-accent, .badge-neutral {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-accent {
+  background: var(--accent-color);
+  color: white;
+}
+
+.badge-neutral {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color-dark);
+}
+
+.light-mode .badge-neutral {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--text-color-light);
+}
+
+.experience-content {
+  padding: 20px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.experience-card li {
+  margin-bottom: 8px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible .experience-card li {
+  animation: fadeInLeft 0.5s ease forwards;
+}
+
+section.visible .experience-card li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+section.visible .experience-card li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+section.visible .experience-card li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+section.visible .experience-card li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+section.visible .experience-card li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+section.visible .experience-card li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+section.visible .experience-card li:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-tags span {
+  background: var(--accent-color-light);
+  color: var(--accent-color);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skills-tags span:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
 }
 
 .light-mode .experience-card,
@@ -925,6 +1077,30 @@ section.visible .project-card:nth-child(2) {
   body {
     padding: 0 20px;
   }
+  
+  .experience-header,
+  .education-header {
+    flex-direction: column;
+  }
+  
+  .experience-company-logo,
+  .education-logo {
+    margin-bottom: 15px;
+  }
+  
+  .experience-duration {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .experience-content ul {
+    padding-left: 15px;
+  }
+  
+  .skills-tags {
+    margin-top: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -949,4 +1125,74 @@ section.visible .project-card:nth-child(2) {
   .about p {
     font-size: 0.95rem;
   }
+}
+
+/* Education specific styles */
+.education-header {
+  display: flex;
+  padding: 20px;
+  background: rgba(79, 70, 229, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.light-mode .education-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.education-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-title {
+  flex: 1;
+}
+
+.education-title h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--text-color-dark);
+  font-weight: 600;
+}
+
+.light-mode .education-title h3 {
+  color: var(--text-color-light);
+}
+
+.education-title h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.education-date {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.education-date i {
+  margin-right: 6px;
+  color: var(--accent-color);
+}
+
+.education-content {
+  padding: 20px;
+}
+
+.education-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
