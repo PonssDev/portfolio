@@ -166,6 +166,53 @@ nav #theme-toggle:hover {
   color: white;
 }
 
+/* Estilos para el botón de descarga de CV y su contenedor */
+.profile-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.cv-button-container {
+  display: inline-flex;
+}
+
+.cv-download-btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease 0.6s forwards;
+}
+
+.cv-download-btn:hover {
+  background: var(--accent-color-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.4);
+}
+
+.cv-download-btn i {
+  margin-right: 5px;
+}
+
+/* Ajuste del badge dentro del nuevo contenedor */
+.badge {
+  margin-bottom: 0;
+}
+
 /* Ajustes adicionales para dispositivos móviles */
 @media (max-width: 768px) {
   nav {
