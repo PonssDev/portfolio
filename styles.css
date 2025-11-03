@@ -971,6 +971,132 @@ section.visible .project-card:nth-child(2) {
   color: inherit;
 }
 
+/* Estilos para múltiples posiciones en la misma empresa (estilo LinkedIn) */
+.experience-position {
+  margin-bottom: 20px;
+}
+
+.experience-position:last-of-type {
+  margin-bottom: 0;
+}
+
+.position-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.position-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--text-color-dark);
+  font-weight: 600;
+}
+
+.light-mode .position-info h3 {
+  color: var(--text-color-light);
+}
+
+.experience-position.internship .position-info h3 {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.experience-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  margin: 25px 0;
+  position: relative;
+}
+
+.light-mode .experience-divider {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.1),
+    transparent
+  );
+}
+
+.experience-divider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  opacity: 0.6;
+}
+
+.badge-internship {
+  background: rgba(236, 72, 153, 0.1);
+  color: var(--secondary-accent);
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Ajustar animaciones para las nuevas posiciones */
+section.visible .experience-position li {
+  animation: fadeInLeft 0.5s ease forwards;
+}
+
+section.visible .experience-position:first-child li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+section.visible .experience-position:first-child li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+section.visible .experience-position:first-child li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+section.visible .experience-position:first-child li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+section.visible .experience-position:first-child li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+section.visible .experience-position:first-child li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+section.visible .experience-position:first-child li:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+section.visible .experience-position.internship li:nth-child(1) {
+  animation-delay: 0.8s;
+}
+
+section.visible .experience-position.internship li:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+section.visible .experience-position.internship li:nth-child(3) {
+  animation-delay: 1s;
+}
+
+section.visible .experience-position.internship li:nth-child(4) {
+  animation-delay: 1.1s;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -1100,6 +1226,20 @@ section.visible .project-card:nth-child(2) {
   
   .skills-tags {
     margin-top: 15px;
+  }
+  
+  .position-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .experience-duration {
+    position: static;
+    align-self: flex-start;
+  }
+  
+  .experience-divider {
+    margin: 20px 0;
   }
 }
 
