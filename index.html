@@ -1,677 +1,607 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alan Delgado Pons | Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="styles-additional.css" />
-    <link rel="stylesheet" href="project-cards.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <meta
-      name="description"
-      content="Portfolio de Alan Delgado Pons, Desarrollador Frontend con experiencia en Angular"
-    />
-  </head>
 
-  <body class="dark-mode">
-    <div id="preloader">
-      <div class="loader">
-        <svg viewBox="0 0 80 80">
-          <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
-        </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alan Delgado Pons | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles-additional.css" />
+  <link rel="stylesheet" href="project-cards.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <meta name="description"
+    content="Portfolio de Alan Delgado Pons, Desarrollador Frontend con experiencia en Angular" />
+</head>
+
+<body class="dark-mode">
+  <div id="preloader">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+      </svg>
+    </div>
+  </div>
+  <button id="scroll-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div class="mobile-nav-overlay"></div>
+
+  <header>
+    <div class="logo">pons</div>
+    <button id="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="mobile-nav" aria-labelledby="mobile-menu-toggle">
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#technologies">Tecnologías</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#education">Formación</a></li>
+        <li>
+          <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="profile" class="profile">
+      <div class="profile-image">
+        <img src="img/foto linkedin (5).png" alt="Foto de perfil de Alan Delgado Pons" />
+      </div>
+      <h1>Alan Delgado Pons</h1>
+      <div class="profile-info-container">
+        <div class="badge">
+          <span>Software Developer</span>
+        </div>
+        <div class="cv-button-container">
+          <a href="CV Delgado Pons Alan 2026.pdf" download class="cv-download-btn">
+            <i class="fas fa-download"></i> Descargar CV
+          </a>
+        </div>
+      </div>
+      <div class="info-items">
+        <div class="info-item">
+          <i class="fas fa-briefcase"></i>
+          <span>Trabajando</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Mallorca, España</span>
+        </div>
+        <div class="info-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/alan-delgado-pons/" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <div class="info-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/PonssDev" target="_blank" rel="noopener noreferrer">Github</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy desarrollador frontend con más de 1 año y medio de experiencia
+        profesional trabajando con Angular, especializado en construir
+        interfaces modernas, funcionales y escalables. Me enfoco en escribir
+        código limpio, modular y mantenible, siguiendo buenas prácticas y
+        patrones de diseño. Durante este tiempo he trabajado en el desarrollo
+        de aplicaciones web dinámicas, tanto de cara al usuario como
+        herramientas internas, integrando APIs REST, manejando estados
+        complejos con RxJS, y aplicando principios de diseño responsivo y
+        accesible.
+      </p>
+    </section>
+    <section id="experience" class="experience">
+      <h2>Experiencia</h2>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-company-logo">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="experience-title">
+              <h3>Software Developer</h3>
+              <h4>RIU Hotels & Resorts</h4>
+              <div class="experience-date">
+                <i class="far fa-calendar-alt"></i>
+                <span>Noviembre 2025 - Actualidad</span>
+              </div>
+            </div>
+            <div class="experience-duration">
+              <span class="badge-accent">Actual</span>
+            </div>
+          </div>
+          <div class="experience-content">
+            <ul>
+              <li>
+                Desarrollo y mantenimiento de aplicaciones en Angular 18+ con
+                Server-Side Rendering (SSR), aplicando buenas prácticas y
+                asegurando un código limpio y eficiente.
+              </li>
+              <li>
+                Análisis de las incidencias y demandas del área comercial,
+                transformándolas en soluciones técnicas funcionales.
+              </li>
+              <li>
+                Implementación de una nueva estrategia de ramas Git, mejorando
+                la organización y reduciendo errores de integración.
+              </li>
+              <li>
+                Colaboración en la definición de buenas prácticas de
+                desarrollo, ayudando a reducir la deuda técnica y mejorar la
+                estabilidad del proyecto.
+              </li>
+              <li>
+                Uso de Node.js para tareas de desarrollo y soporte, y
+                despliegue de aplicaciones en entornos Red Hat OpenShift.
+              </li>
+            </ul>
+            <div class="skills-tags">
+              <span>Angular</span>
+              <span>GitLab</span>
+              <span>Jenkins</span>
+              <span>Red Hat Openshift</span>
+              <span>Datadog</span>
+              <span>Magnolia</span>
+              <span>ServiceNow</span>
+              <span>NodeJS</span>
+            </div>
+          </div>
+        </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-company-logo">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="experience-title">
+              <h3>Software Developer</h3>
+              <h4>Sling Technology</h4>
+              <div class="experience-date">
+                <i class="far fa-calendar-alt"></i>
+                <span>Junio 2025 - Octubre 2025</span>
+              </div>
+            </div>
+            <div class="experience-duration">
+              <span class="badge-neutral">5 meses</span>
+            </div>
+          </div>
+          <div class="experience-content">
+            <ul>
+              <p>Software developer del equipo de desarrollo de la famosa hotelera RIU Hotels, donde participo en el
+                desarrollo y
+                mantenimiento de sus diferentes secciones utilizando Angular 16+. Trabajo aplicando buenas prácticas de
+                arquitectura
+                modular y escalable, y colaboro en un entorno CI/CD con GitLab, Jenkins y Red Hat OpenShift para la
+                gestión de
+                despliegues.
+
+                Además, he contribuido activamente en la definición y mejora del nuevo método de buenas prácticas para
+                el desarrollo,
+                ayudando a establecer una base más sólida y coherente para los futuros proyectos del equipo.</p>
+            </ul>
+            <div class="skills-tags">
+              <span>Angular</span>
+              <span>GitLab</span>
+              <span>Jenkins</span>
+              <span>Red Hat Openshift</span>
+              <span>Datadog</span>
+              <span>Magnolia</span>
+              <span>ServiceNow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-company-logo">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="experience-title">
+              <h3>Software Developer</h3>
+              <h4>World2Meet</h4>
+              <div class="experience-date">
+                <i class="far fa-calendar-alt"></i>
+                <span>Marzo 2024 - Mayo 2025</span>
+              </div>
+            </div>
+            <div class="experience-duration">
+              <span class="badge-neutral">1 año 3 meses</span>
+            </div>
+          </div>
+          <div class="experience-content">
+            <div class="experience-position">
+              <div class="position-header">
+                <div class="position-info">
+                  <h3>Software Developer</h3>
+                  <div class="experience-date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Junio 2024 - Mayo 2025</span>
+                  </div>
+                </div>
+                <div class="experience-duration">
+                  <span class="badge-neutral">11 meses</span>
+                </div>
+              </div>
+              <ul>
+                <li>
+                  Desarrollar, mantener y optimizar aplicaciones web SPA y SSR
+                  utilizando Angular.
+                </li>
+                <li>
+                  Gestionar y automatizar los pipelines CI/CD a través de
+                  Jenkins, asegurando el correcto despliegue de los entornos
+                  TST, PRE, STG y PRO.
+                </li>
+                <li>
+                  Implementar y gestionar despliegues continuos utilizando
+                  ArgoCD.
+                </li>
+                <li>
+                  Colaborar con los equipos de desarrollo y operaciones
+                  utilizando Azure DevOps para la gestión de proyectos y control
+                  de versiones.
+                </li>
+                <li>Documentar y mantener APIs utilizando Swagger.</li>
+                <li>
+                  Asegurar la calidad del código a través de la implementación
+                  de las mejores prácticas, pruebas automatizadas y revisiones
+                  de código.
+                </li>
+                <li>
+                  Participar activamente en la resolución de problemas y la
+                  mejora continua de los procesos de entrega y despliegue.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-divider"></div>
+
+            <div class="experience-position internship">
+              <div class="position-header">
+                <div class="position-info">
+                  <h3>Junior Software Developer Intern</h3>
+                  <div class="experience-date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Marzo 2024 - Junio 2024</span>
+                  </div>
+                </div>
+                <div class="experience-duration">
+                  <span class="badge-internship">Prácticas - 4 meses</span>
+                </div>
+              </div>
+              <ul>
+                <li>
+                  Desarrollo de componentes Angular bajo supervisión del equipo senior.
+                </li>
+                <li>
+                  Aprendizaje y aplicación de mejores prácticas en desarrollo frontend.
+                </li>
+                <li>
+                  Participación en el ciclo de desarrollo ágil y metodologías Scrum.
+                </li>
+                <li>
+                  Colaboración en la documentación técnica y testing de aplicaciones.
+                </li>
+              </ul>
+            </div>
+
+            <div class="skills-tags">
+              <span>Angular</span>
+              <span>Jenkins</span>
+              <span>ArgoCD</span>
+              <span>Azure DevOps</span>
+              <span>Swagger</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Proyectos</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/tiny-invoice.png" alt="TinyInvoice - Generador de facturas" />
+            <div class="project-badge" style="background: var(--accent-color)">
+              Completado
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>TinyInvoice</h3>
+            <p>
+              Generador de facturas para Freelancers. Aplicación web que
+              permite crear, gestionar y exportar facturas de forma rápida y
+              sencilla sin necesidad de registro.
+            </p>
+            <div class="project-tech">
+              <span>Angular</span>
+              <span>TypeScript</span>
+              <span>CSS</span>
+              <span>Reactive Forms</span>
+            </div>
+            <div class="project-progress">
+              <span>Lanzado: Mayo 2025</span>
+            </div>
+            <div class="project-links">
+              <a href="https://tiny-invoice.vercel.app/" target="_blank" aria-label="Ver proyecto" title="Ver proyecto">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/PonssDev/tiny-invoice" target="_blank" aria-label="Ver código en GitHub"
+                title="Ver código en GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/country-app.PNG" alt="CountriesApp" />
+            <div class="project-badge" style="background: var(--accent-color)">
+              Completado
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>CountriesApp</h3>
+            <p>
+              App simple para ver y buscar países por capital, región o país y
+              poder ver sus características. Implementada con Angular y
+              consumiendo la API REST Countries.
+            </p>
+            <div class="project-tech">
+              <span>Angular</span>
+              <span>TypeScript</span>
+              <span>REST API</span>
+              <span>TailwindCSS</span>
+              <span>DaisyUI</span>
+            </div>
+            <div class="project-progress">
+              <span>Lanzado: Mayo 2025</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="disabled" aria-label="Ver proyecto" title="Próximamente">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/PonssDev/country-app" target="_blank" aria-label="Ver código en GitHub"
+                title="Ver código en GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="img/Spoiler ninja Landing.png" alt="SpoilerNinja" />
+            <div class="project-badge" style="background: var(--accent-color)">
+              Completado
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Spoiler Ninja</h3>
+            <p>
+              Spoiler Ninja es una extensión que bloquea automáticamente las portadas de episodios en Netflix,
+              reemplazándolas con imágenes neutras para
+              proteger tu experiencia de visualización.
+            </p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+            <div class="project-progress">
+              <span>Lanzado: Diciembre 2025</span>
+            </div>
+            <div class="project-links">
+              <a href="https://spoiler-ninja.vercel.app/" target="_blank" aria-label="Ver proyecto" title="Ver proyecto">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://chromewebstore.google.com/detail/spoiler-ninja/npciiifpgdfkgojkdidigkjakpgfnhif?authuser=0&hl=es-419" target="_blank" aria-label="Instalar extensión" title="Instalar extensión">
+                <i class="fas fa-puzzle-piece"></i>
+              </a>
+              <a href="https://github.com/PonssDev/SpoilerFree_app" target="_blank" aria-label="Ver código en GitHub"
+                title="Ver código en GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="technologies" class="technologies">
+      <h2>Tecnologías</h2>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="fab fa-angular"></i>
+          </div>
+          <span>Angular</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="bx bxl-typescript"></i>
+          </div>
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <span>HTML</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <span>CSS</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="fab fa-jenkins"></i>
+          </div>
+          <span>Jenkins</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="fas fa-vial"></i>
+          </div>
+          <span>Playwright</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <span>Microsoft Azure</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="fab fa-gitlab"></i>
+          </div>
+          <span>GitLab</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Habilidades</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>Angular</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 70%; background: var(--accent-color)"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>TypeScript</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 70%; background: var(--accent-color)"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>HTML/CSS</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 80%; background: var(--accent-color)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>DevOps</h3>
+          <div class="skill-bars">
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>Jenkins</span>
+                <span>45%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 45%; background: var(--secondary-accent)"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>GitLab CI/CD</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 70%; background: var(--secondary-accent)"></div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-info">
+                <span>ArgoCD</span>
+                <span>35%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="progress" style="width: 35%; background: var(--secondary-accent)"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="education">
+      <h2>Formación</h2>
+      <div class="education-grid">
+        <div class="education-card">
+          <div class="education-header">
+            <div class="education-logo">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-title">
+              <h3>
+                Formación superior en Desarrollo de Aplicaciones Web (DAW)
+              </h3>
+              <h4>EDIB</h4>
+              <div class="education-date">
+                <i class="far fa-calendar-alt"></i>
+                <span>Octubre 2022 - Junio 2024</span>
+              </div>
+            </div>
+          </div>
+          <div class="education-content">
+            <p>
+              Ciclo Formativo de Grado Superior enfocado en el desarrollo de
+              aplicaciones web modernas, cubriendo tanto frontend como
+              backend.
+            </p>
+            <div class="skills-tags">
+              <span>Java</span>
+              <span>MySQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">pons</div>
+      <div class="footer-text">
+        &copy; 2025 Alan Delgado Pons. Todos los derechos reservados.
+      </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/alan-delgado-pons/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/PonssDev" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
     </div>
-    <button id="scroll-top" aria-label="Volver arriba">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+  </footer>
 
-    <div class="mobile-nav-overlay"></div>
+  <script src="script.js"></script>
+</body>
 
-    <header>
-      <div class="logo">pons</div>
-      <button
-        id="mobile-menu-toggle"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-        aria-controls="mobile-nav"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav id="mobile-nav" aria-labelledby="mobile-menu-toggle">
-        <ul>
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#experience">Experiencia</a></li>
-          <li><a href="#skills">Habilidades</a></li>
-          <li><a href="#technologies">Tecnologías</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#education">Formación</a></li>
-          <li>
-            <button id="theme-toggle" aria-label="Cambiar modo oscuro/claro">
-              <i class="fas fa-moon"></i>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section id="profile" class="profile">
-        <div class="profile-image">
-          <img
-            src="img/foto linkedin (5).png"
-            alt="Foto de perfil de Alan Delgado Pons"
-          />
-        </div>
-        <h1>Alan Delgado Pons</h1>
-        <div class="profile-info-container">
-          <div class="badge">
-            <span>Software Developer</span>
-          </div>
-          <div class="cv-button-container">
-            <a
-              href="CV Delgado Pons Alan.pdf"
-              download
-              class="cv-download-btn"
-            >
-              <i class="fas fa-download"></i> Descargar CV
-            </a>
-          </div>
-        </div>
-        <div class="info-items">
-          <div class="info-item">
-            <i class="fas fa-briefcase"></i>
-            <span>Trabajando</span>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Mallorca, España</span>
-          </div>
-          <div class="info-item">
-            <i class="fab fa-linkedin"></i>
-            <a
-              href="https://www.linkedin.com/in/alan-delgado-pons/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn</a
-            >
-          </div>
-          <div class="info-item">
-            <i class="fab fa-github"></i>
-            <a
-              href="https://github.com/PonssDev"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Github</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="about">
-        <h2>Sobre mí</h2>
-        <p>
-          Soy desarrollador frontend con más de 1 año y medio de experiencia
-          profesional trabajando con Angular, especializado en construir
-          interfaces modernas, funcionales y escalables. Me enfoco en escribir
-          código limpio, modular y mantenible, siguiendo buenas prácticas y
-          patrones de diseño. Durante este tiempo he trabajado en el desarrollo
-          de aplicaciones web dinámicas, tanto de cara al usuario como
-          herramientas internas, integrando APIs REST, manejando estados
-          complejos con RxJS, y aplicando principios de diseño responsivo y
-          accesible.
-        </p>
-      </section>
-      <section id="experience" class="experience">
-        <h2>Experiencia</h2>
-        <div class="experience-grid">
-          <div class="experience-card">
-            <div class="experience-header">
-              <div class="experience-company-logo">
-                <i class="fas fa-code"></i>
-              </div>
-              <div class="experience-title">
-                <h3>Software Developer</h3>
-                <h4>RIU Hotels & Resorts</h4>
-                <div class="experience-date">
-                  <i class="far fa-calendar-alt"></i>
-                  <span>Noviembre 2025 - Actualidad</span>
-                </div>
-              </div>
-              <div class="experience-duration">
-                <span class="badge-accent">Actual</span>
-              </div>
-            </div>
-            <div class="experience-content">
-              <ul>
-                <li>
-                  Desarrollo y mantenimiento de aplicaciones en Angular 18+ con
-                  Server-Side Rendering (SSR), aplicando buenas prácticas y
-                  asegurando un código limpio y eficiente.
-                </li>
-                <li>
-                  Análisis de las incidencias y demandas del área comercial,
-                  transformándolas en soluciones técnicas funcionales.
-                </li>
-                <li>
-                  Implementación de una nueva estrategia de ramas Git, mejorando
-                  la organización y reduciendo errores de integración.
-                </li>
-                <li>
-                  Colaboración en la definición de buenas prácticas de
-                  desarrollo, ayudando a reducir la deuda técnica y mejorar la
-                  estabilidad del proyecto.
-                </li>
-                <li>
-                  Uso de Node.js para tareas de desarrollo y soporte, y
-                  despliegue de aplicaciones en entornos Red Hat OpenShift.
-                </li>
-              </ul>
-              <div class="skills-tags">
-                <span>Angular</span>
-                <span>GitLab</span>
-                <span>Jenkins</span>
-                <span>Red Hat Openshift</span>
-                <span>Datadog</span>
-                <span>Magnolia</span>
-                <span>ServiceNow</span>
-                <span>NodeJS</span>
-              </div>
-            </div>
-          </div>
-          <div class="experience-card">
-            <div class="experience-header">
-              <div class="experience-company-logo">
-                <i class="fas fa-code"></i>
-              </div>
-              <div class="experience-title">
-                <h3>Software Developer</h3>
-                <h4>Sling Technology</h4>
-                <div class="experience-date">
-                  <i class="far fa-calendar-alt"></i>
-                  <span>Junio 2025 - Octubre 2025</span>
-                </div>
-              </div>
-              <div class="experience-duration">
-                <span class="badge-neutral">5 meses</span>
-              </div>
-            </div>
-            <div class="experience-content">
-              <ul>
-                <p>Software developer del equipo de desarrollo de la famosa hotelera RIU Hotels, donde participo en el desarrollo y
-                mantenimiento de sus diferentes secciones utilizando Angular 16+. Trabajo aplicando buenas prácticas de arquitectura
-                modular y escalable, y colaboro en un entorno CI/CD con GitLab, Jenkins y Red Hat OpenShift para la gestión de
-                despliegues.
-                
-                Además, he contribuido activamente en la definición y mejora del nuevo método de buenas prácticas para el desarrollo,
-                ayudando a establecer una base más sólida y coherente para los futuros proyectos del equipo.</p>
-              </ul>
-              <div class="skills-tags">
-                <span>Angular</span>
-                <span>GitLab</span>
-                <span>Jenkins</span>
-                <span>Red Hat Openshift</span>
-                <span>Datadog</span>
-                <span>Magnolia</span>
-                <span>ServiceNow</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="experience-card">
-            <div class="experience-header">
-              <div class="experience-company-logo">
-                <i class="fas fa-laptop-code"></i>
-              </div>
-              <div class="experience-title">
-                <h3>Software Developer</h3>
-                <h4>World2Meet</h4>
-                <div class="experience-date">
-                  <i class="far fa-calendar-alt"></i>
-                  <span>Marzo 2024 - Mayo 2025</span>
-                </div>
-              </div>
-              <div class="experience-duration">
-                <span class="badge-neutral">1 año 3 meses</span>
-              </div>
-            </div>
-            <div class="experience-content">
-              <div class="experience-position">
-                <div class="position-header">
-                  <div class="position-info">
-                    <h3>Software Developer</h3>
-                    <div class="experience-date">
-                      <i class="far fa-calendar-alt"></i>
-                      <span>Junio 2024 - Mayo 2025</span>
-                    </div>
-                  </div>
-                  <div class="experience-duration">
-                    <span class="badge-neutral">11 meses</span>
-                  </div>
-                </div>
-                <ul>
-                  <li>
-                    Desarrollar, mantener y optimizar aplicaciones web SPA y SSR
-                    utilizando Angular.
-                  </li>
-                  <li>
-                    Gestionar y automatizar los pipelines CI/CD a través de
-                    Jenkins, asegurando el correcto despliegue de los entornos
-                    TST, PRE, STG y PRO.
-                  </li>
-                  <li>
-                    Implementar y gestionar despliegues continuos utilizando
-                    ArgoCD.
-                  </li>
-                  <li>
-                    Colaborar con los equipos de desarrollo y operaciones
-                    utilizando Azure DevOps para la gestión de proyectos y control
-                    de versiones.
-                  </li>
-                  <li>Documentar y mantener APIs utilizando Swagger.</li>
-                  <li>
-                    Asegurar la calidad del código a través de la implementación
-                    de las mejores prácticas, pruebas automatizadas y revisiones
-                    de código.
-                  </li>
-                  <li>
-                    Participar activamente en la resolución de problemas y la
-                    mejora continua de los procesos de entrega y despliegue.
-                  </li>
-                </ul>
-              </div>
-              
-              <div class="experience-divider"></div>
-              
-              <div class="experience-position internship">
-                <div class="position-header">
-                  <div class="position-info">
-                    <h3>Junior Software Developer Intern</h3>
-                    <div class="experience-date">
-                      <i class="far fa-calendar-alt"></i>
-                      <span>Marzo 2024 - Junio 2024</span>
-                    </div>
-                  </div>
-                  <div class="experience-duration">
-                    <span class="badge-internship">Prácticas - 4 meses</span>
-                  </div>
-                </div>
-                <ul>
-                  <li>
-                    Desarrollo de componentes Angular bajo supervisión del equipo senior.
-                  </li>
-                  <li>
-                    Aprendizaje y aplicación de mejores prácticas en desarrollo frontend.
-                  </li>
-                  <li>
-                    Participación en el ciclo de desarrollo ágil y metodologías Scrum.
-                  </li>
-                  <li>
-                    Colaboración en la documentación técnica y testing de aplicaciones.
-                  </li>
-                </ul>
-              </div>
-              
-              <div class="skills-tags">
-                <span>Angular</span>
-                <span>Jenkins</span>
-                <span>ArgoCD</span>
-                <span>Azure DevOps</span>
-                <span>Swagger</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="projects">
-        <h2>Proyectos</h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <div class="project-image">
-              <img
-                src="img/tiny-invoice.png"
-                alt="TinyInvoice - Generador de facturas"
-              />
-              <div
-                class="project-badge"
-                style="background: var(--accent-color)"
-              >
-                Completado
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>TinyInvoice</h3>
-              <p>
-                Generador de facturas para Freelancers. Aplicación web que
-                permite crear, gestionar y exportar facturas de forma rápida y
-                sencilla sin necesidad de registro.
-              </p>
-              <div class="project-tech">
-                <span>Angular</span>
-                <span>TypeScript</span>
-                <span>CSS</span>
-                <span>Reactive Forms</span>
-              </div>
-              <div class="project-progress">
-                <span>Lanzado: Mayo 2025</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://tiny-invoice.vercel.app/"
-                  target="_blank"
-                  aria-label="Ver proyecto"
-                  title="Ver proyecto"
-                >
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-                <a
-                  href="https://github.com/PonssDev/tiny-invoice"
-                  target="_blank"
-                  aria-label="Ver código en GitHub"
-                  title="Ver código en GitHub"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="img/country-app.PNG" alt="CountriesApp" />
-              <div
-                class="project-badge"
-                style="background: var(--accent-color)"
-              >
-                Completado
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>CountriesApp</h3>
-              <p>
-                App simple para ver y buscar países por capital, región o país y
-                poder ver sus características. Implementada con Angular y
-                consumiendo la API REST Countries.
-              </p>
-              <div class="project-tech">
-                <span>Angular</span>
-                <span>TypeScript</span>
-                <span>REST API</span>
-                <span>TailwindCSS</span>
-                <span>DaisyUI</span>
-              </div>
-              <div class="project-progress">
-                <span>Lanzado: Mayo 2025</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="#"
-                  class="disabled"
-                  aria-label="Ver proyecto"
-                  title="Próximamente"
-                >
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-                <a
-                  href="https://github.com/PonssDev/country-app"
-                  target="_blank"
-                  aria-label="Ver código en GitHub"
-                  title="Ver código en GitHub"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="project-card">
-                    <div class="project-image">
-                        <img src="img/spoiler-ninja.PNG" alt="SpoilerNinja - Protección contra spoilers">
-                        <div class="project-badge" style="background: var(--secondary-accent);">En Desarrollo</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>SpoilerNinja</h3>
-                        <p>Extensión para navegadores que detecta y bloquea automáticamente spoilers de series, películas y videojuegos en redes sociales usando machine learning.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>Browser API</span>
-                            <span>HTML/CSS</span>
-                            <span>TensorFlow.js</span>
-                        </div>
-                        <div class="project-progress">
-                            <span>Lanzamiento: Agosto 2025</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="disabled" aria-label="Ver proyecto" title="En desarrollo">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/PonssDev/spoiler-ninja" target="_blank" aria-label="Ver código en GitHub" title="Ver código en GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
-        </div>
-      </section>
-
-      <section id="technologies" class="technologies">
-        <h2>Tecnologías</h2>
-        <div class="tech-grid">
-          <div class="tech-item">
-            <div class="tech-icon">
-              <i class="fab fa-angular"></i>
-            </div>
-            <span>Angular</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <i class="bx bxl-typescript"></i>
-            </div>
-            <span>TypeScript</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <i class="fab fa-html5"></i>
-            </div>
-            <span>HTML</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <i class="fab fa-css3-alt"></i>
-            </div>
-            <span>CSS</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <i class="fab fa-jenkins"></i>
-            </div>
-            <span>Jenkins</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <i class="fas fa-vial"></i>
-            </div>
-            <span>Playwright</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <i class="fab fa-microsoft"></i>
-            </div>
-            <span>Microsoft Azure</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <i class="fab fa-gitlab"></i>
-            </div>
-            <span>GitLab</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="skills">
-        <h2>Habilidades</h2>
-        <div class="skills-container">
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <div class="skill-bars">
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>Angular</span>
-                  <span>70%</span>
-                </div>
-                <div class="skill-progress">
-                  <div
-                    class="progress"
-                    style="width: 70%; background: var(--accent-color)"
-                  ></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>TypeScript</span>
-                  <span>70%</span>
-                </div>
-                <div class="skill-progress">
-                  <div
-                    class="progress"
-                    style="width: 70%; background: var(--accent-color)"
-                  ></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>HTML/CSS</span>
-                  <span>80%</span>
-                </div>
-                <div class="skill-progress">
-                  <div
-                    class="progress"
-                    style="width: 80%; background: var(--accent-color)"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>DevOps</h3>
-            <div class="skill-bars">
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>Jenkins</span>
-                  <span>45%</span>
-                </div>
-                <div class="skill-progress">
-                  <div
-                    class="progress"
-                    style="width: 45%; background: var(--secondary-accent)"
-                  ></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>GitLab CI/CD</span>
-                  <span>70%</span>
-                </div>
-                <div class="skill-progress">
-                  <div
-                    class="progress"
-                    style="width: 70%; background: var(--secondary-accent)"
-                  ></div>
-                </div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-info">
-                  <span>ArgoCD</span>
-                  <span>35%</span>
-                </div>
-                <div class="skill-progress">
-                  <div
-                    class="progress"
-                    style="width: 35%; background: var(--secondary-accent)"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="education" class="education">
-        <h2>Formación</h2>
-        <div class="education-grid">
-          <div class="education-card">
-            <div class="education-header">
-              <div class="education-logo">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-              <div class="education-title">
-                <h3>
-                  Formación superior en Desarrollo de Aplicaciones Web (DAW)
-                </h3>
-                <h4>EDIB</h4>
-                <div class="education-date">
-                  <i class="far fa-calendar-alt"></i>
-                  <span>Octubre 2022 - Junio 2024</span>
-                </div>
-              </div>
-            </div>
-            <div class="education-content">
-              <p>
-                Ciclo Formativo de Grado Superior enfocado en el desarrollo de
-                aplicaciones web modernas, cubriendo tanto frontend como
-                backend.
-              </p>
-              <div class="skills-tags">
-                <span>Java</span>
-                <span>MySQL</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>PHP</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-logo">pons</div>
-        <div class="footer-text">
-          &copy; 2025 Alan Delgado Pons. Todos los derechos reservados.
-        </div>
-        <div class="social-links">
-          <a
-            href="https://www.linkedin.com/in/alan-delgado-pons/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/PonssDev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
 </html>
