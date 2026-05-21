@@ -257,20 +257,39 @@
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
   .project-image {
-    height: 200px;
+    height: 180px;
+  }
+  
+  .project-content {
+    padding: 20px;
   }
   
   .project-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   
   .project-card p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
   }
   
   .project-links a {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-image {
+    height: 160px;
+  }
+  
+  .project-content {
+    padding: 16px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.2rem;
   }
 }
 

@@ -586,20 +586,168 @@ section.visible .education-card {
   100% { transform: scale(1); }
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .tech-marquee-content { gap: 40px; }
-  .tech-item-marquee i { font-size: 2.8rem; }
-  .tech-marquee { animation-duration: 30s; }
+/* ==========================================================================
+   Responsive Design Strategy (Consolidated)
+   ========================================================================== */
+
+/* Tablet & Smaller Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  body {
+    padding: 0 25px;
+  }
   
-  .profile h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
+  .profile h1 {
+    font-size: 3.2rem;
+  }
   
-  .experience-header, .education-header { flex-direction: column; }
-  .experience-company-logo, .education-logo { margin-bottom: 15px; }
+  h2 {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+  
+  section {
+    margin-bottom: 70px;
+  }
+  
+  .about, .experience-content, .education-content {
+    padding: 30px;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 20px;
+  }
 }
 
+/* Mobile & Small Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px;
+  }
+  
+  header {
+    padding: 25px 0;
+  }
+  
+  .logo {
+    font-size: 2.2rem;
+  }
+  
+  .profile {
+    margin: 30px 0 60px;
+  }
+  
+  .profile h1 {
+    font-size: 2.6rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  .about, .experience-content, .education-content {
+    padding: 24px;
+  }
+  
+  .experience-header, .education-header {
+    flex-direction: column;
+    padding: 24px;
+    gap: 15px;
+  }
+  
+  .experience-company-logo, .education-logo {
+    margin-right: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .experience-duration {
+    align-self: flex-start;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 16px;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Small Mobile Screens (max-width: 480px) */
 @media (max-width: 480px) {
-  .profile h1 { font-size: 2rem; }
-  .badge { padding: 8px 20px; }
+  body {
+    padding: 0 16px;
+  }
+  
+  .profile h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .badge {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about, .experience-content, .education-content {
+    padding: 20px;
+  }
+  
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .tech-item {
+    padding: 16px 10px;
+  }
+  
+  .tech-icon {
+    font-size: 2.2rem;
+  }
+  
+  .info-items {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .info-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
