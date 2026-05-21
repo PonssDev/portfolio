@@ -266,6 +266,16 @@ header {
   border-color: var(--accent-color);
 }
 
+.info-items a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.info-items a:hover {
+  color: var(--accent-color);
+}
+
 /* Section styles */
 section {
   margin-bottom: 80px;
@@ -636,6 +646,56 @@ section.visible .education-card {
   gap: 30px;
 }
 
+/* Skills section */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.skill-category {
+  background: rgba(30, 32, 48, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--card-shadow-dark);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.light-mode .skill-category {
+  background: rgba(230, 233, 239, 0.4);
+  box-shadow: var(--card-shadow-light);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.skill-category:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+}
+
+.skill-category h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  color: var(--accent-color);
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+}
+
+.skill-category h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
 /* Animations */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes fadeInUp {
@@ -682,6 +742,10 @@ section.visible .education-card {
   .tech-grid {
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 20px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -745,6 +809,11 @@ section.visible .education-card {
   .project-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
