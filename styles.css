@@ -538,6 +538,72 @@ section.visible .education-card {
   padding: 30px;
 }
 
+/* Multi-role position styles */
+.experience-position {
+  position: relative;
+  padding: 10px 0;
+}
+
+.experience-position:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.experience-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, rgba(136, 57, 239, 0.2), transparent);
+  margin: 15px 0 35px;
+  position: relative;
+}
+
+.experience-divider::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--card-bg-dark);
+  padding: 0 15px;
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.light-mode .experience-divider::after {
+  background: var(--card-bg-light);
+}
+
+.position-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.position-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--text-color-dark);
+  margin-bottom: 5px;
+}
+
+.light-mode .position-info h3 {
+  color: var(--text-color-light);
+}
+
+.badge-internship {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(136, 57, 239, 0.1);
+  color: var(--accent-color);
+  border: 1px solid rgba(136, 57, 239, 0.2);
+}
+
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
