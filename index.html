@@ -11,14 +11,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <meta name="description"
     content="Portfolio de Alan Delgado Pons, Desarrollador Frontend con experiencia en Angular" />
 </head>
 
 <body class="dark-mode">
+  <!-- Background Effects -->
+  <div class="bg-noise"></div>
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
   <div id="preloader">
     <div class="loader">
       <svg viewBox="0 0 80 80">
@@ -94,7 +102,7 @@
     <section id="about" class="about">
       <h2>Sobre mí</h2>
       <p>
-        Soy desarrollador frontend con más de 1 año y medio de experiencia
+        Soy desarrollador frontend con más de 2 años de experiencia
         profesional trabajando con Angular, especializado en construir
         interfaces modernas, funcionales y escalables. Me enfoco en escribir
         código limpio, modular y mantenible, siguiendo buenas prácticas y
@@ -131,6 +139,9 @@
                 Desarrollo y mantenimiento de aplicaciones en Angular 18+ con
                 Server-Side Rendering (SSR), aplicando buenas prácticas y
                 asegurando un código limpio y eficiente.
+              </li>
+              <li>
+                Integración con APIs backend y colaboración en desarrollos iniciales con Java/Spring Boot
               </li>
               <li>
                 Análisis de las incidencias y demandas del área comercial,
@@ -426,63 +437,81 @@
       <div class="tech-grid">
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fab fa-angular"></i>
+            <i class="devicon-angularjs-plain colored"></i>
           </div>
           <span>Angular</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="bx bxl-typescript"></i>
+            <i class="devicon-typescript-plain colored"></i>
           </div>
           <span>TypeScript</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fab fa-html5"></i>
+            <i class="devicon-html5-plain colored"></i>
           </div>
           <span>HTML</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fab fa-css3-alt"></i>
+            <i class="devicon-java-plain colored"></i>
           </div>
-          <span>CSS</span>
+          <span>Java</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fab fa-node-js"></i>
+            <i class="devicon-spring-plain colored"></i>
           </div>
-          <span>Node.js</span>
+          <span>Spring Boot</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fas fa-vial"></i>
+            <i class="devicon-nestjs-plain colored"></i>
           </div>
-          <span>Cypress</span>
+          <span>NestJS</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fab fa-jenkins"></i>
+            <i class="devicon-mysql-plain colored"></i>
           </div>
-          <span>Jenkins</span>
+          <span>MySQL</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fas fa-vial"></i>
+            <i class="devicon-oracle-original colored"></i>
+          </div>
+          <span>Oracle SQL</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="devicon-playwright-plain colored"></i>
           </div>
           <span>Playwright</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fab fa-microsoft"></i>
+            <i class="fas fa-vial" style="color: #49c326;"></i>
           </div>
-          <span>Microsoft Azure</span>
+          <span>Cypress</span>
         </div>
         <div class="tech-item">
           <div class="tech-icon">
-            <i class="fab fa-gitlab"></i>
+            <i class="devicon-jenkins-plain colored"></i>
           </div>
-          <span>GitLab</span>
+          <span>Jenkins</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="devicon-docker-plain colored"></i>
+          </div>
+          <span>Docker</span>
+        </div>
+        <div class="tech-item">
+          <div class="tech-icon">
+            <i class="fab fa-redhat" style="color: #e93442;"></i>
+          </div>
+          <span>OpenShift</span>
         </div>
       </div>
     </section>
@@ -492,66 +521,41 @@
       <div class="skills-container">
         <div class="skill-category">
           <h3>Frontend</h3>
-          <div class="skill-bars">
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span>Angular</span>
-                <span>70%</span>
-              </div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 70%; background: var(--accent-color)"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span>TypeScript</span>
-                <span>70%</span>
-              </div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 70%; background: var(--accent-color)"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span>HTML/CSS</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 80%; background: var(--accent-color)"></div>
-              </div>
-            </div>
+          <div class="skills-tags">
+            <span>Angular</span>
+            <span>TypeScript</span>
+            <span>HTML</span>
           </div>
         </div>
         <div class="skill-category">
-          <h3>DevOps</h3>
-          <div class="skill-bars">
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span>Jenkins</span>
-                <span>45%</span>
-              </div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 45%; background: var(--secondary-accent)"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span>GitLab CI/CD</span>
-                <span>70%</span>
-              </div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 70%; background: var(--secondary-accent)"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-info">
-                <span>ArgoCD</span>
-                <span>35%</span>
-              </div>
-              <div class="skill-progress">
-                <div class="progress" style="width: 35%; background: var(--secondary-accent)"></div>
-              </div>
-            </div>
+          <h3>Backend</h3>
+          <div class="skills-tags">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>NestJs</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Testing</h3>
+          <div class="skills-tags">
+            <span>Playwright</span>
+            <span>Cypress</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Base de datos</h3>
+          <div class="skills-tags">
+            <span>MySQL</span>
+            <span>Oracle SQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>DevOps & Infraestructura</h3>
+          <div class="skills-tags">
+            <span>Docker</span>
+            <span>OpenShift</span>
+            <span>Jenkins (CI/CD)</span>
           </div>
         </div>
       </div>

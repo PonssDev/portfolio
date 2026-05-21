@@ -15,8 +15,64 @@
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+#preloader::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: var(--gradient-subtle);
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: pulse 2s infinite;
+}
+
 .light-mode #preloader {
   background-color: var(--bg-color-light);
+}
+
+/* Custom Cursor */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  
+  a, button, .experience-card, .project-card, .tech-item {
+    cursor: none;
+  }
+
+  .custom-cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    mix-blend-mode: difference;
+  }
+
+  .custom-cursor-blur {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color-light);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0.5;
+  }
+
+  .custom-cursor.active {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-color);
+  }
 }
 
 .loader {
@@ -352,11 +408,13 @@ nav #theme-toggle:hover {
 }
 
 .skill-category h3 {
+  font-family: var(--font-heading);
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: var(--accent-color);
   position: relative;
   display: inline-block;
+  letter-spacing: -0.02em;
 }
 
 .skill-category h3::after {
@@ -367,54 +425,6 @@ nav #theme-toggle:hover {
   width: 40px;
   height: 2px;
   background: var(--gradient-primary);
-}
-
-.skill-bars {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.skill-bar {
-  width: 100%;
-}
-
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-}
-
-.skill-progress {
-  height: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.light-mode .skill-progress {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.progress {
-  height: 100%;
-  border-radius: 10px;
-  transition: width 1.5s ease-in-out;
-  width: 0;
-}
-
-.visible .progress {
-  animation: progressAnimation 1.5s ease-in-out forwards;
-}
-
-@keyframes progressAnimation {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: var(--width);
-  }
 }
 
 /* Footer */

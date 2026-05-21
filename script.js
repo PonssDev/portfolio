@@ -1,4 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Custom Cursor
+  const cursor = document.createElement("div");
+  cursor.className = "custom-cursor";
+  document.body.appendChild(cursor);
+
+  const cursorBlur = document.createElement("div");
+  cursorBlur.className = "custom-cursor-blur";
+  document.body.appendChild(cursorBlur);
+
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+    
+    cursorBlur.style.left = `${e.clientX}px`;
+    cursorBlur.style.top = `${e.clientY}px`;
+
+    // Move blobs slightly based on mouse
+    const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+    const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+    
+    const blobs = document.querySelectorAll(".blob");
+    blobs.forEach((blob, index) => {
+      const factor = (index + 1) * 0.5;
+      blob.style.transform = `translate(${moveX * factor}px, ${moveY * factor}px)`;
+    });
+  });
+
+  document.addEventListener("mousedown", () => {
+    cursor.style.transform = "translate(-50%, -50%) scale(0.8)";
+  });
+
+  document.addEventListener("mouseup", () => {
+    cursor.style.transform = "translate(-50%, -50%) scale(1)";
+  });
+
+  // Cursor Active State
+  const interactiveElements = document.querySelectorAll("a, button, .experience-card, .project-card, .tech-item");
+  interactiveElements.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursor.classList.add("active");
+    });
+    el.addEventListener("mouseleave", () => {
+      cursor.classList.remove("active");
+    });
+  });
+
+  document.addEventListener("mouseleave", () => {
+    cursor.style.opacity = "0";
+    cursorBlur.style.opacity = "0";
+  });
+
+  document.addEventListener("mouseenter", () => {
+    cursor.style.opacity = "1";
+    cursorBlur.style.opacity = "0.5";
+  });
+
   // Preloader
   const preloader = document.getElementById("preloader");
   if (preloader) {
