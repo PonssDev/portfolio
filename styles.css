@@ -1,42 +1,50 @@
 /* Base styles and variables */
 :root {
-  /* Colores principales - Esquema moderno y minimalista */
-  --bg-color-light: #ffffff;
-  --text-color-light: #1a1a1a;
-  --bg-color-dark: #121212;
-  --text-color-dark: #f0f0f0;
+  /* Catppuccin Palette - Latte (Light) & Macchiato (Dark) */
+  /* Colores principales */
+  --bg-color-light: #eff1f5; /* Latte Base */
+  --text-color-light: #4c4f69; /* Latte Text */
+  --bg-color-dark: #24273a; /* Macchiato Base */
+  --text-color-dark: #cad3f5; /* Macchiato Text */
   
-  /* Colores de acento - Paleta vibrante pero profesional */
-  --accent-color: #4f46e5; /* Púrpura/Indigo */
-  --accent-color-hover: #6366f1;
-  --accent-color-light: rgba(79, 70, 229, 0.1);
-  --secondary-accent: #ec4899; /* Rosa vibrante para detalles */
+  /* Colores de acento - Mauve & Lavender */
+  --accent-color: #8839ef; /* Latte Mauve */
+  --accent-color-hover: #7287fd; /* Latte Lavender */
+  --accent-color-light: rgba(136, 57, 239, 0.15);
+  --secondary-accent: #ea76cb; /* Latte Pink */
+  
+  /* Ajustes para Dark Mode (se sobrescribirán en el body.dark-mode si es necesario, 
+     pero mantendremos una base coherente) */
   
   /* Colores para tarjetas */
-  --card-bg-dark: #1e1e1e;
-  --card-bg-light: #f9fafb;
-  --card-shadow-light: 0 10px 25px rgba(0, 0, 0, 0.05);
-  --card-shadow-dark: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --card-bg-dark: #1e2030; /* Macchiato Mantle */
+  --card-bg-light: #e6e9ef; /* Latte Mantle */
+  --card-shadow-light: 0 10px 30px rgba(204, 208, 218, 0.5);
+  --card-shadow-dark: 0 10px 30px rgba(24, 25, 38, 0.6);
   
   /* Elementos de diseño */
-  --border-radius: 12px;
-  --border-radius-sm: 6px;
-  --transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
-  --container-width: 1200px;
+  --border-radius: 16px; /* Bordes un poco más suaves */
+  --border-radius-sm: 8px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --container-width: 1100px;
   
   /* Tipografía */
-  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  --font-family: "Inter", "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-size-base: 16px;
-  --line-height: 1.6;
+  --line-height: 1.7;
   
-  /* Animaciones */
-  --animation-duration: 0.8s;
-  --animation-delay-factor: 0.1s;
-  
-  /* Gradientes */
-  --gradient-primary: linear-gradient(135deg, var(--accent-color), var(--secondary-accent));
-  --gradient-subtle: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(236, 72, 153, 0.1));
+  /* Gradientes Catppuccin */
+  --gradient-primary: linear-gradient(135deg, #8839ef, #ea76cb); /* Mauve to Pink */
+  --gradient-subtle: linear-gradient(135deg, rgba(136, 57, 239, 0.1), rgba(234, 118, 203, 0.1));
+}
+
+body.dark-mode {
+  --accent-color: #c6a0f6; /* Macchiato Mauve */
+  --accent-color-hover: #b7bdf8; /* Macchiato Lavender */
+  --accent-color-light: rgba(198, 160, 246, 0.2);
+  --secondary-accent: #f5bde6; /* Macchiato Pink */
+  --gradient-primary: linear-gradient(135deg, #c6a0f6, #f5bde6);
+  --gradient-subtle: linear-gradient(135deg, rgba(198, 160, 246, 0.1), rgba(245, 189, 230, 0.1));
 }
 
 * {

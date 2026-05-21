@@ -58,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.style.width = "100%";
     overlay.style.height = "100%";
     overlay.style.backgroundColor = body.classList.contains("dark-mode")
-      ? "#0a1929"
-      : "#ffffff";
+      ? "#24273a" /* Macchiato Base */
+      : "#eff1f5"; /* Latte Base */
     overlay.style.zIndex = "9999";
     overlay.style.opacity = "0";
     overlay.style.pointerEvents = "none";

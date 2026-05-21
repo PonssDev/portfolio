@@ -235,7 +235,7 @@
   transform: translateY(-5px) scale(1.1);
   color: white;
   background: var(--accent-color);
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 8px 20px var(--accent-color-light);
 }
 
 .project-links a.disabled {
